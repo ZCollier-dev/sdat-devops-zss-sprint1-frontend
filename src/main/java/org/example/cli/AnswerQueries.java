@@ -2,29 +2,25 @@ package org.example.cli;
 
 public class AnswerQueries {
 
-    private static final String BASE_URL = "http://localhost:8080/api";
+    private final HttpClientHelper client;
 
-    public void getAirportsByCity() {
-        String url = BASE_URL + "/airports/by-city";
-        System.out.println("Airports by City:");
-        HttpClientHelper.sendGet(url);
+    public AnswerQueries(HttpClientHelper client) {
+        this.client = client;
     }
 
-    public void getAircraftByPassenger() {
-        String url = BASE_URL + "/aircrafts/by-passenger";
-        System.out.println("Aircraft by Passenger:");
-        HttpClientHelper.sendGet(url);
+    public String getAirportsByCity() {
+        return client.get("http://localhost:8080/api/airports/by-city");
     }
 
-    public void getAirportsByAircraft() {
-        String url = BASE_URL + "/airports/by-aircraft";
-        System.out.println("Airports by Aircraft:");
-        HttpClientHelper.sendGet(url);
+    public String getAircraftByPassenger() {
+        return client.get("http://localhost:8080/api/aircrafts/by-passenger");
     }
 
-    public void getAirportsByPassenger() {
-        String url = BASE_URL + "/airports/by-passenger";
-        System.out.println("Airports by Passenger:");
-        HttpClientHelper.sendGet(url);
+    public String getAirportsByAircraft() {
+        return client.get("http://localhost:8080/api/airports/by-aircraft");
+    }
+
+    public String getAirportsByPassenger() {
+        return client.get("http://localhost:8080/api/airports/by-passenger");
     }
 }
