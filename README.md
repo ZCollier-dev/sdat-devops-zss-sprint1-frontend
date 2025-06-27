@@ -4,4 +4,4 @@ The frontend CLI program for the Midterm Sprint - Keyin College, Semester 4 of S
 
 AUTHORS: Zachary Collier, Kyle/Scarlett Budgell, Sarah Elizabeth Murphy
 
-VIDEO: /coming soon
+VIDEO: https://youtu.be/flXM-lVeFkQ
