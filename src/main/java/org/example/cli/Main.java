@@ -34,6 +34,7 @@ public class Main {
                     break;
                 case 0:
                     System.out.println("Exiting.");
+                    scanner.close();
                     return;
                 default:
                     System.out.println("Invalid option.");
